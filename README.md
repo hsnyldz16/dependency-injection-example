@@ -1,49 +1,52 @@
-# Dependency Injection Example
+# Dependency Injection Örneği
 
-> Dependency injection doesn't have to be complicated. Let's work it out together!
+> Dependency injection karmaşık olmak zorunda değil. Hadi bunu beraber görelim
 
-## What is it?
+## Peki nedir?
 
-Dependency injection is a technique that makes it easier to manage the dependencies of your classes, and allow for better testing using the mocking technique. There are plenty of examples out there on the internet, but I found that many of them tend to overcomplicate the technique. This package contains a simple down-to-earth explanation of the concept, step-by-step and  through the medium of code comments.
+Dependency injection sınıf bağımlıklıklarını daha kolay kontrol altına almak için, daha iyi bir test ortamı hazırlamak ve mocking(sahte sınıf türetme) tekniğini kullanışlı hale getirmek için kullanılır.
+İnternette Dependency injection ile ilgili bir çok örnek var fakat bir çoğunu oldukça karmaşık buldum. Bu paket ile Dependency injection kavramını kodların içeriğinde bulunan yorum satırlarıyla, adım adım daha kolay anlayacaksınız.
 
-## Who wrote it?
+## Peki bu kimin eseri?
 
-Hi! I'm [Dayle Rees](http://daylerees.com).
+Merhaba! ben [Dayle Rees](http://daylerees.com).
 
-I'm an open source enthusiast, and a [Laravel framework](http://laravel.com) core developer. I'm also very fond of teaching. My books [Code Bright](http://leanpub.com/codebright) and [Code Happy](http://leanpub.com/codehappy) have helped thousands of PHP web developers adopt the Laravel PHP framework.
+Açık kaynak kod hayranıyım, ve [Laravel framework](http://laravel.com) core geliştiricisiyim.
+Ayrıca öğretmeye düşkünüm. Kitaplarım [Code Bright](http://leanpub.com/codebright) ve [Code Happy](http://leanpub.com/codehappy) binlerce web geliştiricisinin Laravel PHP frameworkunu benimsemesini sağladı.
 
-My writing style is simple and plain spoken, just like this description!
+Yazı sitilim basit ve sade bir dil içerir, tıpkı bu açıklamada olduğu gibi.
 
-## How do I learn?
+## Nasıl öğreneceğim?
 
-It's easy, see those `page-x` directories? Each of them represent our complete progress at a different point of time. Starting at `part-1` we have an application in dire need of some dependency injection. Throughout the parts we discover difficulties, and develop resolutions.
+Çok kolay kılasörlerdeki 'part-x' leri görüyormusun? Her biri tamamladığımız işlem adımlarını temsil ediyor. `part-1` den başlayarak dependency injection gerekliliklerini algılayıp, zorlukları keşfedip, çözümlerini buluyoruz.
 
-To learn, you need only read the comments held within. First take a look at the architecture of the application within the `part-x/src` directory, and all comments held within the classes. It's not a big application, less than five files. Next look at the associated test files within the `part-x/tests` directory to learn more about the limitations of each stage of the applications development.
+Öğrenmek için yorum satırlarını okuman yeterlidir. İlk olarak uygulamanın mimarisine bir göz atalım. `part-x/src` klasörünün içince yorumlu sınıflardan oluşan 5 den az dosya vardır. İlgili test dosyaları ise `part-x/tests` klasörünün içindedir. Uygulama geliştirirken her adımda oluşan engelleri bu test dosyaları aracılığıyla öğreneceksiniz.
 
-Don't forget to run `phpunit` from the `part-x` directory to examine the test results.
+`phpunit` komutunu her part-x` klasörününde çalıştırıp test sonuçlarını incelemeyi unutmayın.
 
-By the time you get to part 9, you will be a dependency injection master.
+part 9' a geldiğinizde bir dependency injection ustası olacaksınız.
 
-## How does it work?
 
-Each part of the repository contains a complete PHP application in various stages of its lifecycle. They each function independently. Class loading is provided by the [composer](http://getcomposer.org/) project so you will find a `composer.json` stored within.
+## Nasıl çalışır?
 
-However, you will not need to have a copy of composer to run the tests. I've versioned the vendor directories along with each stage so that you can run the tests right away! Lucky you!
+Deponun her bir bölümü tamamlanmış çeşitli yaşam döngü safhalarından oluşan PHP uygulaması barındırır. Her bölüm bir birinden bağımsızdır. Sınıf yükleme işi composer](http://getcomposer.org/) tarafından sağlanır. Bu nedenle her bir bölümde `composer.json` dosyası vardır.
+Ayrıca testleri çalıştırmak için composerın bir kopyasını oluşturmanız gerekmiyor. Vendor dosyalarını her bir test için versiyonladığım için testleri direk çalıştırabilirsiniz. Şanslısınız Vesselam!
 
-Our application files are `psr-0` autoloaded (file structure and path matching namespace) from the `part-x/src` directories. All tests are located within the `part-x/tests` directory, and each stage contains a `phpunit.xml` bootstrap so that you can run the tests with only the `phpunit` command.
+Uygulama dosyalarımız `psr-0` standartlarına göre `part-x/src` klasörlerinde kaydedilmiştir. Bütün test dosyaları `part-x/tests` klasörünün altındadır. Her bölüm `phpunit.xml` dosyası içermektedir. Bu nedenle `phpunit` komutuyla test işlemlerini gerçekleştirebilirsiniz.
 
-## Any other advice?
+## Ek tavsiye olarak
 
-Read through each stage carefully, noting the differences between previous stages. Normally these are outlined in the comments. Get to know the architecture, and visualize the problems.
-
-I'd recommend cloning the repository down locally so you can view the source in a syntax-highlighting editor, and run the tests directly.
+Her bir bölümü dikkatlice okuyun. Repository'i localinize clonlamanızı tavsiye ediyorum. böylece text editörünüzün özelliklerini kullanabilir ve testleri çalıştırarak deneyebilirsiniz.
 
 ## How can I thank you?
 
-Why not buy my latest Laravel book? Laravel is a beautiful framework that makes excellent use of the dependency injection and inversion of control principles. You can [get a copy here on Leanpub](http://leanpub.com/codebright).
+## Size nasıl teşekkür edebilirim?
 
-Don't want to part with cash? Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
 
-Don't forget to [follow me on twitter](https://twitter.com/daylerees)!
+Neden olmasın son Laravel kitabımı alabilirsiniz. Laravel dependency injectionı ve inversion of control prensiplerini kullanan harika bir framework. [Leanpub üzerinden bir kopyasını alabilirsiniz](http://leanpub.com/codebright)
 
-Thanks!
+İlla paramı olması gerekiyor. Tabiykide değil github repomu beğene bilirsiniz. İlgiye bayılırım. Dünyaya yayılması için bu repositoryin linkini Twitter veya HackerNews de paylaşabilirsin. 
+
+[Twitterda beni takip](https://twitter.com/daylerees) etmeyi unutmayın!
+
+Teşekkürler!
