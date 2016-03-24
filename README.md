@@ -20,9 +20,9 @@ Yazı sitilim basit ve sade bir dil içerir, tıpkı bu açıklamada olduğu gib
 
 Çok kolay kılasörlerdeki 'part-x' leri görüyormusun? Her biri tamamladığımız işlem adımlarını temsil ediyor. `part-1` den başlayarak dependency injection gerekliliklerini algılayıp, zorlukları keşfedip, çözümlerini buluyoruz.
 
-Öğrenmek için yorum satırlarını okuman yeterlidir. İlk olarak uygulamanın mimarisine bir göz atalım. `part-x/src` klasörünün içince yorumlu sınıflardan oluşan 5 den az dosya vardır. İlgili test dosyaları ise `part-x/tests` klasörünün içindedir. Uygulama geliştirirken her adımda oluşan engelleri bu test dosyaları aracılığıyla öğreneceksiniz.
+Öğrenmek için yorum satırlarını okuman yeterlidir. İlk olarak uygulamanın mimarisine bir göz atalım. `part-x/src` klasörünün içince yorumlu sınıflardan oluşan 5'den az dosya bulunmaktadır. İlgili test dosyaları ise `part-x/tests` klasörünün içindedir. 
 
-`phpunit` komutunu her part-x` klasörününde çalıştırıp test sonuçlarını incelemeyi unutmayın.
+`phpunit` komutunu her 'part-x' klasörününde çalıştırıp test sonuçlarını incelemeyi unutmayın.
 
 part 9' a geldiğinizde bir dependency injection ustası olacaksınız.
 
@@ -38,14 +38,11 @@ Uygulama dosyalarımız `psr-0` standartlarına göre `part-x/src` klasörlerind
 
 Her bir bölümü dikkatlice okuyun. Repository'i localinize clonlamanızı tavsiye ediyorum. böylece text editörünüzün özelliklerini kullanabilir ve testleri çalıştırarak deneyebilirsiniz.
 
-## How can I thank you?
-
 ## Size nasıl teşekkür edebilirim?
-
 
 Neden olmasın son Laravel kitabımı alabilirsiniz. Laravel dependency injectionı ve inversion of control prensiplerini kullanan harika bir framework. [Leanpub üzerinden bir kopyasını alabilirsiniz](http://leanpub.com/codebright)
 
-İlla paramı olması gerekiyor. Tabiykide değil github repomu beğene bilirsiniz. İlgiye bayılırım. Dünyaya yayılması için bu repositoryin linkini Twitter veya HackerNews de paylaşabilirsin. 
+İlla paramı olması gerekiyor. Tabiyki de değil github repomu beğenebilirsiniz. İlgiye bayılırım. Dünyaya yayılması için bu repositoryin linkini Twitter veya HackerNews de paylaşabilirsin. 
 
 [Twitterda beni takip](https://twitter.com/daylerees) etmeyi unutmayın!
 
