@@ -6,20 +6,16 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * Our tests for this class aren't dependent on any
-     * specific FeedReader implementation anymore, so
-     * why don't we mock the interface directly?
-     *
-     * I hope you have enjoyed this tutorial (is it really
-     * a tutorial?) on dependency injection. Stay tuned for
-     * a similar introduction to the inversion of control
-     * principle.
-     *
-     * Thanks for reading!
-     * Dayle.
-     */
+     * Testlerimiz artık FeedReader sınıfına bağımlı değil
+     * ee o zaman neden interface'i mock işlemine tabi tutmayalım
+     * 
+     * Umarım dependency injection ders serisinden memnun kalmışsınızdır.
+     * (gerçekten bir ders serisi değil mi?) inversion of control prensiplerini
+     * anlatan benzer bir tanıtım için tetikte olun.
+     * 
+     * Okuduğunuz için teşekkürler
+     * Dayle
+    */
     public function testSocialFeedCanBeInstantiated()
     {
         $f = M::mock('Example\FeedReaders\FeedReaderInterface');
@@ -27,7 +23,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Let's test that messages are returned.
+     * Hadi dönen mesajları test edelim.
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {
@@ -46,7 +42,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Arkanı temizle
      */
     public function tearDown()
     {

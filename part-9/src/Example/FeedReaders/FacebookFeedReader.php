@@ -5,15 +5,14 @@ namespace Example\FeedReaders;
 class FacebookFeedReader implements FeedReaderInterface
 {
     /**
-     * Retrieve an array of messages from the Facebook API.
+     * Facebook API den array mesajları döndürür
      *
      * @return array
      */
     public function getMessages()
     {
-        // We've learned about mocking, so we don't need to
-        // break the API right now. Let's return some
-        // dummy messages instead.
+        // mocking yapmayı öğrendik o yüzden API yı bozmaya gerek yok
+        // Onun yerine birkaç rastgele mesaj gönderelim
         return array(
             'LOOK AT PHOTOS OF MY KIDS',
             'HAHA LOOK WHAT MY CAT DID',

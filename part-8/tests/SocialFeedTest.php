@@ -6,27 +6,25 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * Now that our injected dependency is type hinted to
-     * an interface, we can inject whichever FeedReader
-     * implementation that we want.
-     *
-     * Our tests pass again! Woooo.
-     *
-     * Seriously though, what we have done here is more
-     * impressive than just fixing to allow our tests to pass.
-     * We've implemented a design pattern. The adapter pattern.
-     *
-     * If we later decide that we want to create a
-     * GooglePlusFeedReader then we can plug it into the system
-     * very easily. We have made it easier to maintain our
-     * application, and future developers on this project
-     * will thank us. Huzzah!
-     *
-     * You know what? We aren't quite done yet.
-     * Switch to the final part for some clean up.
-     */
+     * 
+     * Şimdi enjekte edilmiş dependency'miz bir interface'e type hint edilmiş durumda.
+     * FeedReader'a artık istediğimiz implementasyonu gerçekleştirebiliriz.
+     * 
+     * Testimiz yine geçti! heyt be
+     * 
+     * Aslında şöyle bir düşünürsek burada yaptığımız şey testin geçmesini
+     * sağlamaktan daha önemli birşey.
+     * Böyle yaparak bir dizayn pattern (tasarım deseni) olan adapter desenini uygulamış olduk.
+     * 
+     * Diyelim ki ileride GooglePlusFeedReader gibi bir sınıfı sistemimize eklemek istedik.
+     * Bu mimariye göre uygulamanın çalışması için ekstra bir kod yazmak zorunda kalmayız.
+     * Ayrıca böyle bir mimari kullanarak kod bakımlarını daha az zaman harcayarak gerçekleştiririz.
+     * Tabiyki sizden sonra gelecek bir yazılımcının arkanızdan iyi sözler sarfetmeside cabası.
+     * 
+     * Aslında tam olrak bitirmedik.
+     * Bir sonraki son bölümde biraz temizlik yapacağız.
+    */
+    
     public function testSocialFeedCanBeInstantiated()
     {
         $t = M::mock('Example\FeedReaders\FacebookFeedReader');
@@ -34,7 +32,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Let's test that messages are returned.
+     * Hadi dönen mesajları test edelim.
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {
@@ -53,7 +51,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Arkanı Temizle
      */
     public function tearDown()
     {

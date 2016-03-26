@@ -1,23 +1,22 @@
 <?php
 
-namespace Example;
+namespace Example\FeedReaders;
 
-class FacebookFeedReader
+use Exception;
+
+class TwitterFeedReader
 {
     /**
-     * Retrieve an array of messages from the Facebook API.
+     * Twitter API den array olarak mesajlar alır
      *
      * @return array
      */
     public function getMessages()
     {
-        // We've learned about mocking, so we don't need to
-        // break the API right now. Let's return some
-        // dummy messages instead.
-        return array(
-            'LOOK AT PHOTOS OF MY KIDS',
-            'HAHA LOOK WHAT MY CAT DID',
-            'HAI PLZ TO PLAY FARMVILLE?'
-        );
+        // Şimdi sonlanan bir bağlantıyı ve fail olan bir işlemi simüle edelim.
+        // uygulama 10 saniye sonra sonlanıyor ve
+        // yeni bir istisna (exception) fırlatıyor.
+        sleep(10);
+        throw new Exception('Connection to twitter timed out.');
     }
 }

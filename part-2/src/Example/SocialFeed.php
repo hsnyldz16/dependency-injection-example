@@ -3,23 +3,24 @@
 namespace Example;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * Retrieve an array of social network status updates.
+     * Sosyal medya durumunu array olarak getirir
      *
      * @return array
      */
     public function getArray()
     {
-        // These classes had a breakup :(
+        // Bu sınıflar ilişkilerini bitirmek zorunda :(
         // ---------------------------------------------------
-        // The tight coupling between our status retrieval class
-        // and our Twitter API class has been loosened. Each class
-        // now has its own single responsibility.
+        // Durum bilgisi getiren sınıfımımz ile 
+        // Twitter API sınıfımız ayrıldılar
+        // Şimdi herbirinin kendi görevi var
+
         $twitterFeedReader = new TwitterFeedReader;
         return $twitterFeedReader->getMessages();
     }

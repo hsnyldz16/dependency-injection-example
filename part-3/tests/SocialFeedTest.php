@@ -6,10 +6,8 @@ use Example\TwitterFeedReader;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -18,15 +16,17 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Injecting!
+     * Enjekte ediliyor!
      *
-     * We can now inject our own instance of a TwitterFeedReader
-     * class into our SocialFeed from the test. The test will still
-     * fail, but we are a step closer.
+     * Şimdi TwitterFeedReader sınıfını SocialFeed 
+     * sınıfına enjekte edebiliriz. Test hala başarısız olacak 
+     * fakat sonuca bir adım daha yaklaştık.
+     * 
+     * Bölüm dörde geçin oradaki testin başarılı 
+     * olduğunu göreceksiniz.
      *
-     * Switch to part four so that we can finally this test to
-     * pass.
      */
+
     public function testCanReturnAnArrayOfStatusUpdates()
     {
         $t = new TwitterFeedReader;

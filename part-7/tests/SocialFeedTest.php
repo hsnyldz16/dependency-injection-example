@@ -6,15 +6,11 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * Let's switch out our TwitterFeedReader mock for
-     * a FacebookFeedReader mock.
-     *
-     * Hmm.. it doesn't pass? Oh that's right. We type-
-     * hinted our TwitterFeedReader, of course it won't
-     * accept a Facebook one!
-     */
+     * Hadi şimdi TwitterFeedReader moc'u FacebookFeedReader mok ile değiştirelim
+     * 
+     * Hmm.. Geçmiyor ooo tabi ya. TwitterFeedReader'ı type hint kullanarak başka bir
+     * verinin geçmesini engellemiştik. Öyle ya Facebook kabul etmez tabiy ki
+    */
     public function testSocialFeedCanBeInstantiated()
     {
         $t = M::mock('Example\FacebookFeedReader');
@@ -22,14 +18,11 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * MVP
-     *
-     * Yep, we get the same problem here. That type-
-     * hinting really is causing problems.
-     *
-     * Let's switch to part-8 to try and resolve our
-     * problems.
-     */
+     * Evet, burada da aynı problem var. 
+     * Bu type-hint gerçektende probleme neden oluyor.
+     * 
+     * Pekala hadi part-8 e geçelim ve problemi çözelim
+    */
     public function testCanReturnAnArrayOfStatusUpdates()
     {
         $t = M::mock('Example\FacebookFeedReader');
@@ -47,7 +40,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Temizlik önemli
      */
     public function tearDown()
     {

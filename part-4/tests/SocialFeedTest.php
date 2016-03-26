@@ -6,10 +6,8 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -18,26 +16,30 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Mocking!
+     * Mocking işlemi!
+     * 
+     * Mockery (https://github.com/padraic/mockery) kütüphanesini 'sahte'
+     * TwitterFeedReader sınıfının örneğini oluşturmak için kullanabiliriz.
+     * O sınıfın testiyle ilgilenmiyoruz. O sınıfın kendi test ortamı olmalı zaten.
+     * 
+     * 
+     * 'sahte' sınıfımızı kullanılarak olması gereken sınıfın özellikleri taklit edilebilir. 
+     * Sahte sınıfımızın 'getMessages' methodundan ne döndüreceğini ona söyleyebiliriz.
+     * böylece sonuc olarak bize array bir değer döndürmesini sağlıyoruz.
+     * 
+     * 
+     * Temel test işlemlerini FeedReader sınıfına sahte injection yaparak  
+     * mock'un tahmin edilebilir yanıtlar vermesini sağlayarak gerçekleştiririz.
+     *  
+     * FeedReader sınıfı 'sahte' yapılmamıştır. Fakat test edilmiştir.
+     * SONUNDA YEŞİL BAR! (fakat uzun süreliğine değil)
      *
-     * We can use the Mockery (https://github.com/padraic/mockery)
-     * library to create a 'fake' instance of the TwitterFeedReader
-     * class. We don't care about testing that class, it should have
-     * its own test suite.
+     * Üzgünüm, ama bunu 5. bölümde tekrar bozacağım !
      *
-     * Our 'fake' class is predictable. We tell
-     * it that it should receive a call to the 'getMessages' method
-     * only once, and return an array of responses.
-     *
-     * By injecting our fake dependency into the FeedReader class
-     * we can base tests upon the mock's predictable responses.
-     * The functionality of the FeedReader class hasn't been faked,
-     * and it has been tested.
-     *
-     * FINALLY WE HAVE A GREEN BAR! (but not for long)
-     *
-     * Sorry, but I'm going to break it in part five!
      */
+
+
+
     public function testCanReturnAnArrayOfStatusUpdates()
     {
         $t = M::mock('Example\TwitterFeedReader');
@@ -55,7 +57,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Nasıl bulduysan öyle bırak...
      */
     public function tearDown()
     {

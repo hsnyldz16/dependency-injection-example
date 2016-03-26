@@ -5,21 +5,21 @@ namespace Example;
 use Example\FeedReaders\FeedReaderInterface;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * An implementation of a FeedReaderInterface.
+     * FeedReaderInterface implementasyonu
      *
      * @var FeedReaderInterface
      */
     private $feedReader;
 
-    /**
-     * Injecting dependencies.
-     *
+     /**
+     * Bağımlılıklar enjekte ediliyor.
+     * 
      * @param FeedReaderInterface $feedReader
      */
     public function __construct(FeedReaderInterface $feedReader)
@@ -28,8 +28,8 @@ class SocialFeed
     }
 
     /**
-     * Retrieve an array of social network status updates.
-     *
+     * Sosyal ağ durum güncellemesi array olarak alınıyor
+     * 
      * @return array
      */
     public function getArray()

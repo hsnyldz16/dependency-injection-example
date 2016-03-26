@@ -1,16 +1,16 @@
 <?php
 
-use Example\FeedReaders\TwitterFeedReader;
+use Example\TwitterFeedReader;
 
 class TwitterFeedReaderTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Since our TwitterFeedReader class is decoupled
-     * from our status update retrieval class we can
-     * now test it in isolation. However, our class
-     * doesn't actually connect to the Twitter API so
-     * here are some dummy tests. Use your imagination
-     * folks!
+     * TwitterFeedReader sınıfımız durum güncellemesi  
+     * getiren sınıfımızdan ayrıldığından beri 
+     * testlerimizi izole edebiliriz. Ayrıca sınıfımız
+     * Twitter API'sine gerçekten bağlı değil. Yani bu
+     * kısım hayali bir test barındırıyor. Herşeyide 
+     * devletten beklemeyin hayal gücünüzü kullanın millet!
      */
     public function testFeedReaderCanBeInstantiated()
     {
@@ -18,7 +18,7 @@ class TwitterFeedReaderTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Dummy test.
+     * Gerçek olmayan test.
      */
     public function testSomethingToDoWithRetreivalFromApi()
     {
@@ -26,7 +26,7 @@ class TwitterFeedReaderTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Dummy test.
+     * Gerçek olmayan test.
      */
     public function testSomethingElseToDoWithRetreivalFromApi()
     {

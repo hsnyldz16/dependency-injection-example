@@ -5,10 +5,8 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -16,19 +14,21 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Decoupled!
+     * Ayrıldılar!
      *
-     * Our Twitter API integration is now its own class
-     * and is decoupled from our status update retrieval
-     * class. Woohoo! Both classes can now have a single
-     * responsibility and can be tested in complete isolation.
+     *  Twitter API'sinin şimdi kendi sınıfı var
+     *  ve bizim durum güncllemesi getiren sınıfımızdan ayrıldı.
+     *  Vayyy sonunda iki sınıfında kendi sorumlukları var ve
+     *  artık tamamen izole olmuş bir şekilde test edilebilirler.
      *
-     * Oh no, we still have a problem though, don't we? The
-     * social update class is still creating and using an
-     * instance of the TwitterFeedReader which cannot reach
-     * the Twitter API. Our tests fail.
-     *
-     * Flip to part three!
+     *  Mi acaba?
+     *  
+     *  Hala bir problemimiz var aslında yok mu? Durum güncellemesi
+     *  sınıfı(SocialFeed) TwitterFeedReader sınıfının içinde örnekleniyor. 
+     *  ki bu sınıf Twitter API'sine ulaşamıyor. 
+     *  Dolasıyla tüm testlerimiz yine başarısız oldu.
+     *  
+     *  Üçüncü bölüme geçin.
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {

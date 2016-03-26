@@ -5,10 +5,8 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -16,20 +14,18 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Bang!
+     * İşte!
      *
-     * Oh dear, our test is failing because the Twitter
-     * API is "down".
+     * Dostum, testimiz fail oldu çünkü Twitter
+     * API'si çöktü.
      *
-     * We have a bigger problem though! Our SocialFeed class
-     * is responsible for interacting with the Twitter API
-     * and formatting/retrieving status updates. Each class
-     * should have a SINGLE RESPONSIBILITY. We can't test
-     * these classes in isolation because they are too
-     * tightly coupled. If one class fails, then so will
-     * the other.
-     *
-     * We can fix this! Switch to part two.
+     * Aslında daha büyük bir problemimiz var.
+     * SocialFeed sınıfımız Twitter API'sinin etkileşiminden ve
+     * durum güncellemelerini formatlamaktan/almaktan sorumlu
+     * Her bir sınıfın yanlızca bir görevi olmalıdır (SINGLE RESPONSIBILITY)
+     * Bu sınıfları bu durumda test edemeyiz. Çünkü birbirine bağımlılar
+     * Birisi fail olduğunda diğeride fail olur.
+     * Elbette bu durumu düzeltebiliriz. İkinci bölüme geçin
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {

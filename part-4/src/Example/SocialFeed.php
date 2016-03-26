@@ -3,34 +3,34 @@
 namespace Example;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * An instance of a TwitterFeedReader.
+     * TwitterFeedReader örneklemesi.
      *
      * @var TwitterFeedReader
      */
     private $twitterFeedReader;
 
     /**
-     * Injecting dependencies.
-     *
-     * We haven't changed anything in this class since the
-     * last part. Go take a look at the tests!
-     *
+     * Bağımlılıklar enjekte ediliyor 
+     * 
+     * Burada son bölümden beri değişiklik yapmadık.
+     * Test kısmına bir göz atın.
+     * 
      * @param TwitterFeedReader $twitterFeedReader
      */
-    public function __construct(TwitterFeedReader  $twitterFeedReader)
+    public function __construct(TwitterFeedReader $twitterFeedReader)
     {
         $this->twitterFeedReader = $twitterFeedReader;
     }
 
     /**
-     * Retrieve an array of social network status updates.
-     *
+     * Sosyal ağ durum güncellemesi array olarak alınıyor
+     * 
      * @return array
      */
     public function getArray()

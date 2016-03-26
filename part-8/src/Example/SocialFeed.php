@@ -5,41 +5,37 @@ namespace Example;
 use Example\FeedReaders\FeedReaderInterface;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * An implementation of a FeedReaderInterface.
+     * FeedReaderInterface implementasyonu
      *
      * @var FeedReaderInterface
      */
     private $feedReader;
 
     /**
-     * Injecting dependencies.
+     * Bağımlılıklar enjekte ediliyor.
      *
-     * We have removed our TwitterFeedReader type hinting and
-     * instead we are type-hinting an interface. This means that
-     * any classes that implement this interface can be injected
-     * into the constructor of this class.
-     *
-     * Not only does this allow for us to inject multiple types
-     * of feed readers, but it creates a 'contract' which ensures
-     * that the 'getMessages()' method we use MUST exist on the
-     * injected class.
-     *
+     * TwitterFeedReader type hintini kaldırıp yerine FeedReaderInterface 
+     * type hintini yerleştirdik. Bu şekilde FeedReaderInterface'ine uygun olan 
+     * her sınıf artık enjekte edilebilir hale gelmiş oldu.
+     * 
      * @param FeedReaderInterface $feedReader
      */
+
+
     public function __construct(FeedReaderInterface $feedReader)
     {
         $this->feedReader = $feedReader;
     }
 
     /**
-     * Retrieve an array of social network status updates.
-     *
+     * Sosyal ağ durum güncellemesi array olarak alınıyor
+     * 
      * @return array
      */
     public function getArray()

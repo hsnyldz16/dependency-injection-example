@@ -6,10 +6,8 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -18,10 +16,9 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * MVP
-     *
-     * Let's test that the SocialFeed class will return
-     * a number of status messages from our feed.
+     * Hadi SocialFeed sınıfımızı test edelim
+     * Sınıfımız kaynağımızdan birkaç tane
+     * durum mesajı gönderecek.
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {
@@ -40,21 +37,17 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Dumb.
-     *
-     * People aren't always clever. There will always be
-     * that one guy that tried to hammer the star into the
-     * square hole. You all know THAT guy.
-     *
-     * THAT guy would probably try to pass something other
-     * than a TwitterFeedReader as a dependency to our
-     * SocialFeed, wouldn't he? He'd probably pass an integer
-     * with a value of four.
-     *
-     * I wonder what will happen.
-     *
-     * Run the tests and then switch to part six.
-     */
+     * İnsanlar her zaman beklenildiği gibi zeki değillerdir.
+     * Birisi mutlaka keser yerine balyoz kullanmayı deneyecektir.
+     * Hepimiz böyle insanların varlığını biliyoruz.
+     * Bu birisi TwitterFeedReader sınıfına SocialFeed
+     * bağımlılığının göndereceğine integer 4 değerini gönderebilir.
+     * 
+     * Ne olacağını merak ettim doğrusu.
+     * 
+     * Testi çalıştırıp bir sonraki bölüme geçin.
+     * 
+    */
     public function testThatWeCanBeACompleteIdiot()
     {
         $s = new SocialFeed(4);
@@ -63,7 +56,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Temizlik İmandan Gelir
      */
     public function tearDown()
     {

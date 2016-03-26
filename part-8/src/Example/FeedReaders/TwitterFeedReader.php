@@ -4,20 +4,18 @@ namespace Example\FeedReaders;
 
 use Exception;
 
-class TwitterFeedReader implements FeedReaderInterface
+class TwitterFeedReader
 {
     /**
-     * Retrieve an array of messages from the Twitter API.
+     * Twitter API den array olarak mesajlar alır
      *
      * @return array
      */
     public function getMessages()
     {
-        // Fail whale!
-        // ---------------------------------------------------
-        // Let's simulate a halted connection, and a failure
-        // by halting the application for ten seconds and
-        // then throwing a new exception.
+        // Şimdi sonlanan bir bağlantıyı ve fail olan bir işlemi simüle edelim.
+        // uygulama 10 saniye sonra sonlanıyor ve
+        // yeni bir istisna (exception) fırlatıyor.
         sleep(10);
         throw new Exception('Connection to twitter timed out.');
     }

@@ -6,10 +6,8 @@ use Example\SocialFeed;
 class SocialFeedTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Will it make?
-     *
-     * First let's try to instantiate to the SocialFeed
-     * class before we attempt to use it.
+     * İlk olarak SocialFeed sınıfını kullanmadan önce
+     * bir örneğini oluşturalım.
      */
     public function testSocialFeedCanBeInstantiated()
     {
@@ -18,10 +16,9 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * MVP
-     *
-     * Let's test that the SocialFeed class will return
-     * a number of status messages from our feed.
+     * Hadi SocialFeed sınıfımızı test edelim
+     * Sınıfımız kaynağımızdan birkaç tane
+     * durum mesajı gönderecek.
      */
     public function testCanReturnAnArrayOfStatusUpdates()
     {
@@ -40,23 +37,15 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Dumb.
-     *
-     * Okay, so we can still pass an integer into our
-     * Social Feed instance. However, because we have
-     * type-hinted our dependency, we receive a more
-     * informative wrist-slapping.
-     *
-     * The test will still fail though, so we will
-     * remove this test in the next example.
-     *
-     * In the next part, let's use our imagination a
-     * little. Let's imagine that we need to switch
-     * our status message source from Twitter to
-     * Facebook.
-     *
-     * Well, what are you waiting for?
-     */
+     * Pekala hala integer SocialFeed örneğine integer değer
+     * gönderiyoruz. Bu sefer type-hinted özelliğinden yararlanıyoruz.
+     * Göreceğiniz üzere daha açıklayıcı bir hata mesajı alıyoruz.
+     * 
+     * Gelecek bölümde Twitter mesaj kaynağımızı Facebook olarak değiştireceğiz
+     * 
+     * Eee daha neyi bekliyorsun.
+     * 
+    */
     public function testThatWeCanBeACompleteIdiot()
     {
         $s = new SocialFeed(4);
@@ -65,7 +54,7 @@ class SocialFeedTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Clean up after yourself!
+     * Aslan yattığı yerden belli olur.
      */
     public function tearDown()
     {

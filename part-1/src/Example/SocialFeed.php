@@ -5,38 +5,36 @@ namespace Example;
 use Exception;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * Retrieve an array of social network status updates.
+     * Sosyal medya durumunu array olarak getirir
      *
      * @return array
      */
     public function getArray()
     {
-        // Boom, testing problems!
+        // İşte test problemleri!
         // ---------------------------------------------------
-        // We can't test this code because our social feed is
-        // too coupled to the code that retrieves messages
-        // from our social network of choice (Twitter).
+        // Bu kodu test edemeyiz sosyal medya beslemesi
+        // kodun mesajları getirmesi için birbirine çok bağımlı
+        // seçtiğimiz sosyal medya (Twitter).
         return $this->getMessages();
     }
 
     /**
-     * Retrieve an array of messages from the Twitter API.
+     * Twitter API den bir array olarak mesajları alır
      *
      * @return array
      */
     public function getMessages()
     {
-        // Fail whale!
-        // ---------------------------------------------------
-        // Let's simulate a halted connection, and a failure
-        // by halting the application for ten seconds and
-        // then throwing a new exception.
+        // Şimdi sonlanan bir bağlantıyı ve fail olan bir işlemi simüle edelim.
+        // uygulama 10 saniye sonra sonlanıyor ve
+        // yeni bir istisna (exception) fırlatıyor.
         sleep(10);
         throw new Exception('Connection to twitter timed out.');
     }

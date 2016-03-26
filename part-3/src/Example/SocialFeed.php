@@ -3,26 +3,28 @@
 namespace Example;
 
 /**
- * Retrieve formatted social network status updates
- * in a number of different formats.
+ * Farklı formatlarda formatlanmış 
+ * sosyal medya durum güncellemesi getirir.
  */
 class SocialFeed
 {
     /**
-     * An instance of a TwitterFeedReader.
+     * TwitterFeedReader örneklemesi.
      *
      * @var TwitterFeedReader
      */
     private $twitterFeedReader;
 
     /**
-     * Injecting dependencies.
-     *
-     * Yey! We are injecting a dependency into the class.
-     * By passing an instance of a TwitterFeedReader class
-     * into the constructor, we have control over the
-     * dependency that the Social Feed class is using.
-     *
+     * Bağımlılıklar enjekte ediliyor 
+     * 
+     * Vay! TwitterFeedReader sınıfının örneğini 
+     * göndererek sınıfa bağımlılık enjekte ediyoruz.
+     * 
+     * constructor içinden SocialFeed sınıfının kullandığı
+     * TwitterFeedReader örneklemesini göndererek
+     * bağımlılık kontrolünü sağlıyoruz
+     * 
      * @param TwitterFeedReader $twitterFeedReader
      */
     public function __construct(TwitterFeedReader  $twitterFeedReader)
@@ -31,21 +33,20 @@ class SocialFeed
     }
 
     /**
-     * Retrieve an array of social network status updates.
+     * Sosyal medya durumunu array olarak getirir
      *
      * @return array
      */
     public function getArray()
     {
-        // No instantiationinginging!
+        // Görüldüğü üzere örnekleme yapılmıyor artık.
         // ---------------------------------------------------
-        // This time we don't need to create a new instance of
-        // our TwitterFeedReader object. Instead we can use
-        // the instance that has been injected through the
-        // constructor of the class.
-        //
-        // So, we are now using dependency injection. Job done,
-        // right? Better take a look at the tests.
+        // Bu sefer yeni bir örnek oluşturmak zorunda değiliz.
+        // Bunun yerine constructor dan set edilen twitterFeedReader 
+        // değişkenini kullanıyoruz.
+        // 
+        // İşte bu kadar işlem tamam artık dependancy injection kullanıyoruz.
+        // Şimdi teste baksakmı ki?
         return $this->twitterFeedReader->getMessages();
     }
 }

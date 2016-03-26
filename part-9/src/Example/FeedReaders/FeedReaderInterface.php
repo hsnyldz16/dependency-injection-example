@@ -5,7 +5,7 @@ namespace Example\FeedReaders;
 interface FeedReaderInterface
 {
     /**
-     * Retrieve an array of status messages.
+     * Durum mesajları array olarak alınıyor
      *
      * @return array
      */
