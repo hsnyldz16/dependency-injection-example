@@ -18,7 +18,7 @@ Yazı sitilim basit ve sade bir dil içerir, tıpkı bu açıklamada olduğu gib
 
 ## Nasıl öğreneceğim?
 
-Çok kolay kılasörlerdeki 'part-x' leri görüyormusun? Her biri tamamladığımız işlem adımlarını temsil ediyor. `part-1` den başlayarak dependency injection gerekliliklerini algılayıp, zorlukları keşfedip, çözümlerini buluyoruz.
+Çok kolay klasörlerdeki 'part-x' leri görüyormusun? Her biri tamamladığımız işlem adımlarını temsil ediyor. `part-1` den başlayarak dependency injection gerekliliklerini algılayıp, zorlukları keşfedip, çözümlerini buluyoruz.
 
 Öğrenmek için yorum satırlarını okuman yeterlidir. İlk olarak uygulamanın mimarisine bir göz atalım. `part-x/src` klasörünün içince yorumlu sınıflardan oluşan 5'den az dosya bulunmaktadır. İlgili test dosyaları ise `part-x/tests` klasörünün içindedir. 
 
